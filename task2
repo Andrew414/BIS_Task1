@@ -1,0 +1,3 @@
+#!/bin/bash
+
+lwp-request "weather.yahooapis.com/forecastrss?w=834463&u=c" | grep -A1 "Current" | tail -n 1 | cut -d '<' -f1
